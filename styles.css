@@ -1,0 +1,169 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* START NAV */
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fcfcfc;
+        padding: 17px 20px;
+        --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+        --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    }
+
+    .logo {
+        
+        text-decoration: none;
+        color: transparent;
+        background: linear-gradient(to left, rgb(207, 3, 3), rgb(255, 24, 24));
+        background-clip: text;
+        font-size: 2em;
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        letter-spacing: 2px;
+    }
+
+    .nav-center {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 0px 10px;
+    }
+
+    .nav-links a {
+        font-family: "Prompt", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        
+        color: rgb(49, 49, 49);
+        text-decoration: none;
+        font-size: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: #e94e4e;
+    }
+
+    .contact-link {
+        font-family: "Prompt", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 14px;
+        background: linear-gradient(to right, #ff1b1b, #ca0000);
+        padding: 11px 22px;
+        border-radius: 8px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+      
+    }
+   
+    /* END NAV */
+    /* START MAIN */
+
+    .main-info{
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .main-info h1{
+        font-family: "Fjalla One", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 43px;
+        letter-spacing: 3px;
+        text-align: center;
+        
+    }
+
+    .gradient-text {
+        font-size: 4em;
+        background: linear-gradient(to left, rgb(207, 3, 3), rgb(255, 24, 24));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .main-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .random-meme {
+        background: linear-gradient(to right, #ff1b1b, #ca0000);
+        border: none;
+        color: white;
+        padding: 12px 30px;
+        width: 300px;
+        font-size: 14px;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.3s ease;
+        /* font */
+        font-family: "Prompt", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .random-meme:hover {
+        transform: scale(1.01);
+    }
+    
+    .random-meme:focus {
+        outline: none;
+    }
+    
+
+/* สไตล์สำหรับป๊อปอัพ */
+.popup {
+    display: none; /* ซ่อนป๊อปอัพเริ่มต้น */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* พื้นหลังทึบ */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* ให้ป๊อปอัพอยู่ด้านบนสุด */
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup img {
+    max-width: 100%;
+    max-height: 80vh; /* ปรับขนาดให้เหมาะสมกับหน้าจอ */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
